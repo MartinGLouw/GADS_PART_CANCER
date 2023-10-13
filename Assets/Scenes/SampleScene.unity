@@ -631,6 +631,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9048325784299833540, guid: 30bec6a9eed1bfa4c81f9325731beadc, type: 3}
+      propertyPath: shootForce
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
