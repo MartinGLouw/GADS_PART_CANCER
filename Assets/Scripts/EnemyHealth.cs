@@ -2,11 +2,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : EnemyManager
 {
     public int maxHealth = 100;
     private int currentHealth;
     public TextMeshProUGUI healthText;
+
+    // Define a delegate and event for when the enemy is destroyed
+    public delegate void EnemyDestroyedAction();
+    public static event EnemyDestroyedAction OnEnemyDestroyed;
 
     void Start()
     {
@@ -28,9 +32,19 @@ public class EnemyHealth : MonoBehaviour
 
     private void DestroyEnemy()
     {
+        // Invoke the OnEnemyDestroyed event before destroying the enemy
+        if (OnEnemyDestroyed != null)
+        {
+            OnEnemyDestroyed.Invoke();
+        }
+
+        // Call EnemyKilled method from EnemyManager
+        FindObjectOfType<EnemyManager>().EnemyKilled();
+
         // Handle enemy death (e.g., play an animation or sound effect before destroying the enemy)
         Destroy(gameObject);
     }
+
 
     private void UpdateHealthText()
     {
