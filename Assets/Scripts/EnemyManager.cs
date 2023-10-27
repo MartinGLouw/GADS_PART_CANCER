@@ -68,6 +68,6 @@ public class EnemyManager : MonoBehaviour
     {
         // Load the next scene
         
-        SceneManager.LoadScene("Testicles");
+        SceneManager.LoadScene("LevelSelect");
     }
 }

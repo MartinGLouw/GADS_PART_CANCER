@@ -16,7 +16,13 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
+        
+        
         if (Input.GetMouseButtonDown(0))
+        {
+            ShootProjectile();
+        }
+        if (Input.GetMouseButton(1))
         {
             ShootProjectile();
         }

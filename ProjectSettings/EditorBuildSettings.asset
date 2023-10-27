@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Lungs.unity
+    guid: 7f5245c5cd1edcc428e31d54f912df91
+  - enabled: 1
+    path: Assets/Scenes/Testicles.unity
+    guid: 5365bd433b2ad634d9ef2d269e172ef4
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: a3d22493224993144ab6c2e9ad673bc5
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 2ab5760f209af3a48a87fd809e8348a0
   m_configObjects: {}
