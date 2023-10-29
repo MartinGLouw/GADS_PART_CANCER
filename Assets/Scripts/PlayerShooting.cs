@@ -39,10 +39,16 @@ public class PlayerShooting : MonoBehaviour
         // Create the projectile and position it at the player's location
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
+        // Rotate the projectile to face the direction of the shot
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        projectile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
         // Get the projectile's Rigidbody component
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
         // Apply force to the projectile in the direction of the mouse pointer
         rb.AddForce(direction * shootForce, ForceMode.Impulse);
     }
+
+
 }

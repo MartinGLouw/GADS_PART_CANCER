@@ -36,4 +36,5 @@ public class UIPopUp : MonoBehaviour
         gameCanvas.enabled = false;
         Time.timeScale = 1f;
     }
+    
 }
