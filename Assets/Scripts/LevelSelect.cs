@@ -70,6 +70,12 @@ public class LevelSelect : MonoBehaviour
         Options.gameObject.SetActive(false);
     }
 
+    public void quit()
+    {
+        
+        Application.Quit();
+    }
+
     
 
 }
