@@ -22,10 +22,7 @@ public class PlayerShooting : MonoBehaviour
         {
             ShootProjectile();
         }
-        if (Input.GetMouseButton(1))
-        {
-            ShootProjectile();
-        }
+        
     }
 
     void ShootProjectile()
